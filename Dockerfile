@@ -17,7 +17,7 @@ ENV HOME /zn
 WORKDIR /zn
 
 #Set upstart command
-ENTRYPOINT ["/usr/bin/dumb-init","/bin/sh","-c","(! ${ENABLE_TOR} || tor&) && python zeronet.py"]
+ENTRYPOINT ["/usr/bin/dumb-init","/usr/bin/python","zeronet.py"]
 CMD ["--ui_ip","0.0.0.0"]
 
 #Expose ports
